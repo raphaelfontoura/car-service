@@ -18,5 +18,9 @@ class CarResource(
 
     @PutMapping("/{id}")
     fun update(@RequestBody car: Car, @PathVariable id: Long) = carService.update(car, id)
+
+    @GetMapping("/inventory")
+    fun listByInventory(@RequestParam model: String) =
+        carService.listByInventory(model)
 }
 
