@@ -9,5 +9,5 @@ import retrofit2.http.Query
 @Service
 interface CarHttpService {
     @GET("cars-inventory")
-    fun getByModel(@Query("model") model: String): Call<List<CarHttp>>
+    suspend fun getByModel(@Query("model") model: String): List<CarHttp>
 }
