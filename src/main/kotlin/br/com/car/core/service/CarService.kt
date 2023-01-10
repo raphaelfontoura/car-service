@@ -16,7 +16,7 @@ internal class CarService(
     private val carHttpService: CarHttpService
 ) : CarService {
 
-    @Cacheable(cacheNames = ["Cars"], key = "#root.method.name")
+    @Cacheable(cacheNames = ["Cars"], key = "#root.method.name, #p1")
     override fun list(model: String?) =
         model?.let {
             carRepository.listByModel(it)
