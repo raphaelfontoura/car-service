@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: car-service
-          image: raphaelfontoura/car-service:v2
+          image: raphaelfontoura/car-service:v4
           ports:
             - containerPort: 8080
           env:
